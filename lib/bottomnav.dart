@@ -1,3 +1,4 @@
+import 'package:admin_panel/feedback.dart';
 import 'package:admin_panel/pendingorderscreen.dart';
 import 'package:admin_panel/productlistscreen.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +19,7 @@ class _bottomState extends State<bottom> {
     order(),
     plist(),
     // pending(),
+    ReviewScreen(),
     profile(),
   ];
 
@@ -41,9 +43,18 @@ class _bottomState extends State<bottom> {
         selectedItemColor: Colors.red,
         unselectedItemColor: Colors.grey,
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.shopping_cart_outlined,size: 30,), label: "Pending Order"),
-          BottomNavigationBarItem(icon: Icon(Icons.add_circle_rounded), label: "Product"),
-          BottomNavigationBarItem(icon: Icon(Icons.account_circle_outlined), label: "Profile"),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.shopping_cart_outlined,
+                size: 30,
+              ),
+              label: "Pending Order"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.add_circle_rounded), label: "Product"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.star_border), label: "Reviews"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.account_circle_outlined), label: "Profile"),
         ],
       ),
     );

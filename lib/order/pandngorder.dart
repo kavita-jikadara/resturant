@@ -142,7 +142,7 @@ class _pandingorderState extends State<pandingorder> {
                                     fontWeight: FontWeight.w500),
                               ),
                               Text(
-                                "203,Rajhans palce,Adajan,surat",
+                                "${productData[index]['uaddress']}",
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 17,

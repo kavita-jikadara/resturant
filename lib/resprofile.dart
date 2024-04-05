@@ -5,6 +5,7 @@ import 'dart:developer';
 import 'package:admin_panel/apiService.dart';
 import 'package:admin_panel/editrestaunrant.dart';
 import 'package:admin_panel/facilityscreen.dart';
+import 'package:admin_panel/loginscreen.dart';
 import 'package:admin_panel/menuscreen.dart';
 import 'package:admin_panel/photoscreen.dart';
 import 'package:admin_panel/restaurantData.dart';
@@ -82,47 +83,56 @@ class _profileState extends State<profile> {
                       ],
                     ),
                     value: 0),
+                // PopupMenuItem(
+                //     onTap: () {
+                //       Navigator.push(
+                //         context,
+                //         MaterialPageRoute(
+                //           builder: (context) => facility(),
+                //         ),
+                //       );
+                //     },
+                //     child: Row(
+                //       children: [
+                //         Text('Add Facility'),
+                //         // Icon(Icons.edit)
+                //       ],
+                //     ),
+                //     value: 1),
+                // PopupMenuItem(
+                //   onTap: () {
+                //     Navigator.push(
+                //       context,
+                //       MaterialPageRoute(builder: (context) => photoscreen()),
+                //     );
+                //   },
+                //   child: Row(
+                //     children: [Text("Add Photo")],
+                //   ),
+                //   value: 2,
+                // ),
+                // PopupMenuItem(
+                //   onTap: () {
+                //     Navigator.push(
+                //       context,
+                //       MaterialPageRoute(builder: (context) => menuscreen()),
+                //     );
+                //   },
+                //   child: Row(
+                //     children: [Text("Add Menu")],
+                //   ),
+                //   value: 3,
+                // ),
                 PopupMenuItem(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => facility(),
-                        ),
-                      );
-                    },
-                    child: Row(
-                      children: [
-                        Text('Add Facility'),
-                        // Icon(Icons.edit)
-                      ],
-                    ),
-                    value: 1),
-                PopupMenuItem(
+                  child: Text('Logout'),
+                  value: 4,
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => photoscreen()),
+                      MaterialPageRoute(builder: (context) => LoginScreen()),
                     );
                   },
-                  child: Row(
-                    children: [Text("Add Photo")],
-                  ),
-                  value: 2,
                 ),
-                PopupMenuItem(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => menuscreen()),
-                    );
-                  },
-                  child: Row(
-                    children: [Text("Add Menu")],
-                  ),
-                  value: 3,
-                ),
-                PopupMenuItem(child: Text('Logout'), value: 4),
               ];
             },
           ),
@@ -281,11 +291,11 @@ class _profileState extends State<profile> {
                   const Divider(
                     height: 10,
                   ),
-                   Padding(
+                  Padding(
                     padding: EdgeInsets.all(2),
                     child: Row(
                       children: [
-                       const Text(
+                        const Text(
                           "Phone No:",
                           style: TextStyle(
                               color: Colors.black,
